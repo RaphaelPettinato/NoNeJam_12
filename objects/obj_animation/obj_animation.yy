@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_player_hands",
+  "%Name":"obj_animation",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_player_hands",
+  "name":"obj_animation",
   "overriddenProperties":[],
   "parent":{
-    "name":"Hands",
-    "path":"folders/Objects/Player/Hands.yy",
+    "name":"Weapons",
+    "path":"folders/Objects/Weapons.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player_hands",
-    "path":"sprites/spr_player_hands/spr_player_hands.yy",
+    "name":"Spr_ANIMATION",
+    "path":"sprites/Spr_ANIMATION/Spr_ANIMATION.yy",
   },
   "spriteMaskId":null,
   "visible":true,

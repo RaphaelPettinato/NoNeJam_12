@@ -23,7 +23,7 @@
   ],
   "name":"Spr_ANIMATION",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"BULLET",
     "path":"folders/Sprites/BULLET.yy",
@@ -75,7 +75,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":8,
+    "xorigin":1,
     "yorigin":8,
   },
   "swatchColours":null,
