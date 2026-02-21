@@ -1,0 +1,20 @@
+{
+  "FolderOrderSettings":[
+    {"name":"ENEMIES","order":1,"path":"folders/Sprites/ENEMIES.yy",},
+    {"name":"BULLET","order":3,"path":"folders/Sprites/BULLET.yy",},
+    {"name":"PLAYER","order":2,"path":"folders/Sprites/PLAYER.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"Spr_ANIMATION","order":1,"path":"sprites/Spr_ANIMATION/Spr_ANIMATION.yy",},
+    {"name":"Spr_ENEIME_06","order":5,"path":"sprites/Spr_ENEIME_06/Spr_ENEIME_06.yy",},
+    {"name":"Spr_enemie_02","order":1,"path":"sprites/Spr_enemie_02/Spr_enemie_02.yy",},
+    {"name":"Spr_ENEMIE_03","order":2,"path":"sprites/Spr_ENEMIE_03/Spr_ENEMIE_03.yy",},
+    {"name":"Spr_ENEMIE_04","order":3,"path":"sprites/Spr_ENEMIE_04/Spr_ENEMIE_04.yy",},
+    {"name":"Spr_ENEMIE_05","order":4,"path":"sprites/Spr_ENEMIE_05/Spr_ENEMIE_05.yy",},
+    {"name":"Spr_ENEMIE_07","order":6,"path":"sprites/Spr_ENEMIE_07/Spr_ENEMIE_07.yy",},
+    {"name":"Spr_ENEMIE_08","order":7,"path":"sprites/Spr_ENEMIE_08/Spr_ENEMIE_08.yy",},
+    {"name":"Spr_PLAYER_ATTACK","order":2,"path":"sprites/Spr_PLAYER_ATTACK/Spr_PLAYER_ATTACK.yy",},
+    {"name":"Spr_PLAYER_DEAD","order":3,"path":"sprites/Spr_PLAYER_DEAD/Spr_PLAYER_DEAD.yy",},
+    {"name":"Spr_PLAYER_RUNNING","order":1,"path":"sprites/Spr_PLAYER_RUNNING/Spr_PLAYER_RUNNING.yy",},
+  ],
+}

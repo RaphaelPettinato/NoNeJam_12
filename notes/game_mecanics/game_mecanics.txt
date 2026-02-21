@@ -1,0 +1,20 @@
+// Mechanics
+
+Player mechanics:
+    - Player will have 3 lives.
+    - When he dies the game will restart.
+    - The player will have access to the bosses when he reaches one determined quantity of points.
+    - The player will have access to different weapons ['glock', 'shotgun', '.38']
+
+Boss mechanics:
+    -
+
+Enemy mechanics:
+    - Some enemies will move at the player's direction
+    - Some of them will stay at one fixed position spawning other enemies
+    - Type of enemies: {
+            the ones that follows the player,
+            the ones that do not follows the player, 
+            and some of them will move at random direction while shooting at the player
+        };
+    
