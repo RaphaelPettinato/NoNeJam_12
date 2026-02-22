@@ -1,3 +1,3 @@
-if (sprite_index == Spr_PLAYER_DEAD) {
+if (sprite_index == spr_player_dying) {
     game_restart();
 }

@@ -32,6 +32,7 @@
     {"$GMObjectProperty":"v2","%Name":"enemy_shoots","filters":[],"listItems":[],"multiselect":false,"name":"enemy_shoots","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"enemy_follow_player","filters":[],"listItems":[],"multiselect":false,"name":"enemy_follow_player","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"enemy_speed","filters":[],"listItems":[],"multiselect":false,"name":"enemy_speed","rangeEnabled":true,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"world","filters":[],"listItems":[],"multiselect":false,"name":"world","rangeEnabled":false,"rangeMax":2.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

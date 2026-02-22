@@ -5,15 +5,16 @@ if (moving) {
     var is_moving = (_vertical != 0 || _horizontal != 0);
 
     // movement
-    y += _vertical * player_speed;
-    x += _horizontal * player_speed;
+    tilemap_id = layer_tilemap_get_id(global.active_tilemap);
+    
+    move_and_collide(_horizontal * player_speed, _vertical * player_speed, [tilemap_id]);
 
     if (_horizontal < 0) image_xscale = -1;
     else if (_horizontal > 0) image_xscale = 1;
 
     if (player_life <= 0) {
         moving = false;
-        sprite_index = Spr_PLAYER_DEAD;
+        sprite_index = spr_player_dying;
     } else if (attacking && !is_moving) {
         
         sprite_index = spr_player_attacking_stoped;
@@ -27,7 +28,7 @@ if (moving) {
         }
         
     } else if (attacking && is_moving) {
-        sprite_index = Spr_PLAYER_ATTACK;
+        sprite_index = spr_player_attacking;
         
         if (!cooldown) 
         {
@@ -38,12 +39,12 @@ if (moving) {
         }
 
     } else if (is_moving) {
-        sprite_index = Spr_PLAYER_RUNNING;
+        sprite_index = spr_player_running;
     } else {
-        sprite_index = Spr_PLAYER_IDLE;
+        sprite_index = spr_player_idle;
     }
     if (player_life <= 0) {
         moving = false;
-        sprite_index = Spr_PLAYER_DEAD;
+        sprite_index = spr_player_dying;
     }
 }

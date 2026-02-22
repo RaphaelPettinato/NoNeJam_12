@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Spr_ENEIME_06",
-    "path":"sprites/Spr_ENEIME_06/Spr_ENEIME_06.yy",
+    "name":"spr_enemy_6",
+    "path":"sprites/spr_enemy_6/spr_enemy_6.yy",
   },
   "spriteMaskId":null,
   "visible":true,

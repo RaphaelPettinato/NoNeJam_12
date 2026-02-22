@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Spr_ENEMIE_03",
-    "path":"sprites/Spr_ENEMIE_03/Spr_ENEMIE_03.yy",
+    "name":"spr_enemy_3",
+    "path":"sprites/spr_enemy_3/spr_enemy_3.yy",
   },
   "spriteMaskId":null,
   "visible":true,
