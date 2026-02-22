@@ -31,7 +31,7 @@ repeat(max_tentativas)
         yposition < top ||
         yposition > bottom;
 
-    var livre = !position_meeting(xposition, yposition, obj_enemy);
+    var livre = (!position_meeting(xposition, yposition, obj_enemy) and !position_meeting(xposition, yposition, obj_player));
 
     if (fora_da_view && livre) break;
 

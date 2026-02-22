@@ -13,3 +13,5 @@ if (global.world != 1) {
 } else {
     sprite_index = spr_enemy_6;
 }
+
+mask_index = spr_enemy_6;

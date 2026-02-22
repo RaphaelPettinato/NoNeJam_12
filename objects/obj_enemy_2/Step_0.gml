@@ -7,3 +7,4 @@ if (global.world != 1) {
     sprite_index = spr_enemy_5;
 }
 
+mask_index = spr_enemy_5;

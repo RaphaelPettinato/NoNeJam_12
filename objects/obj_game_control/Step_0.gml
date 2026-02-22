@@ -26,8 +26,3 @@ if (mouse_check_button_pressed(mb_right))
         layer_background_visible(background_white_id, false);
     }
 }
-
-if (global.points > 1000) 
-{
-    
-}

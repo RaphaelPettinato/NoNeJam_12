@@ -3,6 +3,7 @@ global.spawn_speed = 0;
 global.active_tilemap = "";
 global.world = 1;
 global.loaded = false;
+global.pause = false;
 
 function start_game(){
     load_game();
@@ -13,8 +14,6 @@ function save_game()
     var _struct = {
         points: global.points
     };
-    
-    show_message(string(global.points));
     
     var _string = json_stringify(_struct);
     
@@ -63,7 +62,7 @@ function create_children(x, y, layer, objeto, quantidade)
         var new_x = x + lengthdir_x(dist, ang);
         var new_y = y + lengthdir_y(dist, ang);
 
-        if (!position_meeting(new_x, new_y, obj_enemy))
+        if (!position_meeting(new_x, new_y, obj_enemy) and !position_meeting(new_x, new_y, obj_player))
         {
             instance_create_layer(new_x, new_y, layer, objeto);
         }
