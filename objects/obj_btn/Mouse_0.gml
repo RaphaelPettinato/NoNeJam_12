@@ -1,7 +1,7 @@
 switch (btn_name) 
 {
     case "sair":
-        game_end();
+        end_game();
         break;
     case "iniciar":
         global.active_tilemap = "TREE_01";

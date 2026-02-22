@@ -1,1 +1,1 @@
-alarm[0] = 180;
+alarm[0] = time_to_spawn;

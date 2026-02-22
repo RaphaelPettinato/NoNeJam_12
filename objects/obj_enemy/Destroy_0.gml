@@ -1,0 +1,1 @@
+global.points += enemy_points;

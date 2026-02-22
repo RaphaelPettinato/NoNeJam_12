@@ -1,3 +1,8 @@
+if (player_life <= 0) {
+    moving = false;
+    sprite_index = spr_player_dying;
+}
+
 if (moving) {
     var _vertical = keyboard_check(ord("S")) - keyboard_check(ord("W"));
     var _horizontal = keyboard_check(ord("D")) - keyboard_check(ord("A"));
@@ -12,10 +17,7 @@ if (moving) {
     if (_horizontal < 0) image_xscale = -1;
     else if (_horizontal > 0) image_xscale = 1;
 
-    if (player_life <= 0) {
-        moving = false;
-        sprite_index = spr_player_dying;
-    } else if (attacking && !is_moving) {
+    if (attacking && !is_moving) {
         
         sprite_index = spr_player_attacking_stoped;
         
@@ -42,9 +44,5 @@ if (moving) {
         sprite_index = spr_player_running;
     } else {
         sprite_index = spr_player_idle;
-    }
-    if (player_life <= 0) {
-        moving = false;
-        sprite_index = spr_player_dying;
     }
 }

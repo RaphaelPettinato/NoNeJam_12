@@ -81,7 +81,7 @@
     {"id":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"rm_teste","path":"rooms/rm_teste/rm_teste.yy",},},
-    {"id":{"name":"script_begin","path":"scripts/script_begin/script_begin.yy",},},
+    {"id":{"name":"script_utils","path":"scripts/script_utils/script_utils.yy",},},
     {"id":{"name":"Spr_ANIMATION","path":"sprites/Spr_ANIMATION/Spr_ANIMATION.yy",},},
     {"id":{"name":"spr_background_menu","path":"sprites/spr_background_menu/spr_background_menu.yy",},},
     {"id":{"name":"Spr_BG_01","path":"sprites/Spr_BG_01/Spr_BG_01.yy",},},
