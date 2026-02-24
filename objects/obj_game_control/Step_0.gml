@@ -1,6 +1,9 @@
 if (mouse_check_button_pressed(mb_right)) 
 {
     switch (room) {
+        case rm_boss_1:
+            change_worlds();
+            break;
         case rm_level_1:
             change_worlds();
             break;

@@ -74,3 +74,63 @@ function end_game()
     save_game();
     game_end();
 }
+
+
+// function that shoots the player's bullets
+function shoot(quantidade)
+{
+    var offset = 8;
+    
+    switch (quantidade) {
+        case 1:
+            instance_create_layer(
+                obj_player_hands.x,
+                obj_player_hands.y,
+                "Instances",
+                obj_bullet
+            );
+            break;
+        case 2:
+            // tiro esquerdo
+            instance_create_layer(
+                obj_player_hands.x - offset,
+                obj_player_hands.y,
+                "Instances",
+                obj_bullet
+            );
+        
+            // tiro direito
+            instance_create_layer(
+                obj_player_hands.x + offset,
+                obj_player_hands.y,
+                "Instances",
+                obj_bullet
+            );
+            break;
+        case 3:
+            // tiro esquerdo
+            instance_create_layer(
+                obj_player_hands.x - offset,
+                obj_player_hands.y,
+                "Instances",
+                obj_bullet
+            );
+            
+            // tiro esquerdo
+            instance_create_layer(
+                obj_player_hands.x,
+                obj_player_hands.y,
+                "Instances",
+                obj_bullet
+            );
+        
+            // tiro direito
+            instance_create_layer(
+                obj_player_hands.x + offset,
+                obj_player_hands.y,
+                "Instances",
+                obj_bullet
+            );
+            break;
+    }
+}

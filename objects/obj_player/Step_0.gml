@@ -3,6 +3,35 @@ if (player_life <= 0) {
     sprite_index = spr_player_dying;
 }
 
+for (var i = ds_list_size(powerups) - 1; i >= 0; i--)
+{
+    var p = powerups[| i];
+    p.time--;
+    
+    switch (p.powerup_name) 
+    {
+        case "obj_powerup_triple_bullets":
+            if (p.time > 0) 
+            {
+                triple_shoot = true;    
+            } else {
+                triple_shoot = false;
+            }
+            break;
+        case "obj_powerup_dual_bullets":
+            if (p.time > 0) {
+                double_shoot = true;
+            } else {
+                double_shoot = false;
+            }
+            break;
+    }
+    
+
+    if (p.time <= 0)
+        ds_list_delete(powerups, i);
+}
+
 if (moving) {
     var _vertical = keyboard_check(ord("S")) - keyboard_check(ord("W"));
     var _horizontal = keyboard_check(ord("D")) - keyboard_check(ord("A"));
@@ -24,9 +53,14 @@ if (moving) {
         if (!cooldown) 
         {
             cooldown = true;
-            instance_create_layer(obj_player_hands.x, obj_player_hands.y, "Instances", obj_animation);
-            instance_create_layer(obj_player_hands.x, obj_player_hands.y, "Instances", obj_bullet);
-            alarm[0] = 15;
+            
+            if (double_shoot) {
+                shoot(2);
+            } else {
+                shoot(1);
+            }
+            
+            alarm[0] = cooldown_time;
         }
         
     } else if (attacking && is_moving) {
@@ -35,9 +69,16 @@ if (moving) {
         if (!cooldown) 
         {
             cooldown = true;
-            instance_create_layer(obj_player_hands.x, obj_player_hands.y, "Instances", obj_animation);
-            instance_create_layer(obj_player_hands.x, obj_player_hands.y, "Instances", obj_bullet);
-            alarm[0] = 15;
+            
+            if (double_shoot) {
+                shoot(2);
+            } else if (triple_shoot) {
+                shoot(3);
+            } else {
+                shoot(1);
+            }
+            
+            alarm[0] = cooldown_time;
         }
 
     } else if (is_moving) {
