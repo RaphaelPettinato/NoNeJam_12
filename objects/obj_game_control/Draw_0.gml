@@ -1,8 +1,6 @@
 cam_x = camera_get_view_x(camera_get_active());
 cam_y = camera_get_view_y(camera_get_active());
 
-draw_text(cam_x + 20, cam_y + 20, string(global.points));
-
 
 var progress = 0;
 
@@ -20,9 +18,11 @@ var frame = base_frame + (current_time div 300 mod 2);
 
 var _sprite_to_draw = "";
 
+var _scale = 0;
+
 switch(room) {
     case rm_level_ainveja:
-        _sprite_to_draw = spr_boss_bar_ovazio;
+        _sprite_to_draw = spr_boss_bar_inveja;
         break;
     case rm_level_ovazio:
         _sprite_to_draw = spr_boss_bar_ovazio;

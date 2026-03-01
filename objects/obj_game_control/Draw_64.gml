@@ -1,7 +1,3 @@
-if (room != rm_menu) {
-    draw_sprite(spr_aim, 0, device_mouse_x_to_gui(0), device_mouse_y_to_gui(0));
-}
-
 if (room == rm_level_ovazio) {
     progress = global.points / 2000;
 } else {
