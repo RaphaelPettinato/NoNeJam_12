@@ -1,9 +1,3 @@
-if (room == rm_level_ovazio) {
-    progress = global.points / 2000;
-} else {
-    progress = global.points / 3000;
-}
-
 if (progress >= 1) {
     var gui_x = display_get_gui_width() / 2;
     

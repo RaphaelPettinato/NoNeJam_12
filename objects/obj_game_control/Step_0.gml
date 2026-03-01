@@ -17,3 +17,9 @@ if (mouse_check_button_pressed(mb_right))
         layer_background_visible(background_white_id, false);
     }
 }
+
+if (room == rm_level_ovazio) {
+    progress = global.points / 2000;
+} else if (room == rm_level_ainveja) {
+    progress = global.points / 3000;
+}

@@ -15,4 +15,3 @@ attack_phase = 0;
 attacking = false;
 can_attack = false;
 can_take_damage = false;
-enemy_speed = 2;
