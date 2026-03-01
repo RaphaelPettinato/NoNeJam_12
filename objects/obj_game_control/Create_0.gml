@@ -1,6 +1,5 @@
 cursor_sprite = spr_aim;
 
-
 audio_stop_all();
 
 switch (room) {
@@ -21,7 +20,7 @@ switch (room) {
     case rm_level_ainveja:
         window_set_cursor(cr_none);
         global.active_tilemap = ["TREE_01"];
-        audio_play_sound(_03_BOSS_MUSIC, 1, 1);
+        audio_play_sound(_04_JUNGLE_BEAT, 1, 1);
         break;
     case rm_level_tutorial:
         window_set_cursor(cr_none);
