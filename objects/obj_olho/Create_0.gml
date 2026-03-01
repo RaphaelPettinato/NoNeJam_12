@@ -1,0 +1,1 @@
+tutorial_olho_hp = 20;

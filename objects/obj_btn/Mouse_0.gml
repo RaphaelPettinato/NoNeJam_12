@@ -4,7 +4,15 @@ switch (btn_name)
         end_game();
         break;
     case "iniciar":
-        global.active_tilemap = "TREE_01";
-        room_goto(rm_level_1);
+        if (!global.tutorial) {
+            room_goto(rm_level_tutorial);
+        } else {
+            if (global.phase == 1) {
+                room_goto(rm_level_ovazio);
+            }
+            if (global.phase == 2) {
+                room_goto(rm_level_ainveja);
+            }
+        }
         break;
 }

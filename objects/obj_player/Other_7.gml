@@ -1,3 +1,3 @@
 if (sprite_index == spr_player_dying) {
-    game_restart();
+    room_goto(rm_menu);
 }

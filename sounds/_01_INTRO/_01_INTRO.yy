@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"_01_INTRO",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":24.0,
+  "exportDir":"",
+  "name":"_01_INTRO",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"_01_INTRO.wav",
+  "volume":1.0,
+}

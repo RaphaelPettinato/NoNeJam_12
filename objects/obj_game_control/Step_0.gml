@@ -1,18 +1,6 @@
 if (mouse_check_button_pressed(mb_right)) 
 {
-    switch (room) {
-        case rm_boss_1:
-            change_worlds();
-            break;
-        case rm_level_1:
-            change_worlds();
-            break;
-        case rm_menu:
-            change_worlds();
-            break;
-        default:
-            break;
-    }
+    change_worlds();
     
     var background_white_layer_id = layer_get_id("background_white");
     var background_red_layer_id = layer_get_id("background_red");

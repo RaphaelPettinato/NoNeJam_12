@@ -1,8 +1,71 @@
+// caso o player morra
 if (player_life <= 0) {
     moving = false;
     sprite_index = spr_player_dying;
 }
 
+// knockback
+if (knockback_force > 0)
+{
+    var dx = lengthdir_x(knockback_force, knockback_dir);
+    var dy = lengthdir_y(knockback_force, knockback_dir);
+
+    var steps = ceil(max(abs(dx), abs(dy)));
+
+    if (steps > 0)
+    {
+        var stepx = dx / steps;
+        var stepy = dy / steps;
+
+        repeat (steps)
+        {
+            // X
+            if (!colide(x + stepx, y, global.active_tilemap))
+                x += stepx;
+            else
+                break;
+
+            // Y
+            if (!colide(x, y + stepy, global.active_tilemap))
+                y += stepy;
+            else
+                break;
+        }
+    }
+
+    knockback_force *= 0.8;
+
+    if (knockback_force < 0.1)
+        knockback_force = 0;
+}
+
+// perdeu uma vida
+if (player_life < last_player_life)
+{
+    lost_life = true;
+    life_anim_timer = 20; // duração da animação
+    life_anim_frame = 0;
+}
+
+last_player_life = player_life;
+
+
+// atualizar animação
+if (lost_life)
+{
+    life_anim_timer--;
+    
+    if (current_time mod 80 == 0) {
+        life_anim_frame++;
+    }
+        
+    if (life_anim_timer <= 0){
+        lost_life = false;
+    }
+}
+
+
+// powerups ativos e desativados
 for (var i = ds_list_size(powerups) - 1; i >= 0; i--)
 {
     var p = powerups[| i];
@@ -28,20 +91,27 @@ for (var i = ds_list_size(powerups) - 1; i >= 0; i--)
     }
     
 
-    if (p.time <= 0)
+    if (p.time <= 0) {
         ds_list_delete(powerups, i);
+    }
 }
 
+// movimentaçao
 if (moving) {
     var _vertical = keyboard_check(ord("S")) - keyboard_check(ord("W"));
     var _horizontal = keyboard_check(ord("D")) - keyboard_check(ord("A"));
     var attacking = mouse_check_button(mb_left);
     var is_moving = (_vertical != 0 || _horizontal != 0);
 
-    // movement
-    tilemap_id = layer_tilemap_get_id(global.active_tilemap);
     
-    move_and_collide(_horizontal * player_speed, _vertical * player_speed, [tilemap_id]);
+    tilemaps_ids = [];
+    for (var _i = 0; _i < array_length(global.active_tilemap); _i++) {
+        var _tilemap_id = layer_tilemap_get_id(global.active_tilemap[_i]);
+        array_push(tilemaps_ids, _tilemap_id);
+    }
+    
+    // movement
+    move_and_collide(_horizontal * player_speed, _vertical * player_speed, tilemaps_ids);
 
     if (_horizontal < 0) image_xscale = -1;
     else if (_horizontal > 0) image_xscale = 1;
@@ -56,6 +126,8 @@ if (moving) {
             
             if (double_shoot) {
                 shoot(2);
+            } else if (triple_shoot) {
+                shoot(3);
             } else {
                 shoot(1);
             }

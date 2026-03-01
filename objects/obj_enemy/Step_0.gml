@@ -1,3 +1,5 @@
+image_blend = c_white;
+
 if (instance_exists(obj_player) && enemy_follow_player) {
     var target = obj_player;
     

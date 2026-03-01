@@ -1,12 +1,28 @@
 randomise();
 
-var enemy_to_spawn = choose(
-    obj_enemy_1, 
-    obj_enemy_1_children, 
-    obj_enemy_2, 
-    obj_enemy_2_children, 
-    obj_enemy_3
-);
+var enemy_to_spawn; 
+var _room = room;
+
+
+switch (room) {
+    case rm_level_ovazio:
+        enemy_to_spawn = choose(
+            enemy_test,
+            obj_enemy_1,
+            obj_enemy_1_children,
+            obj_inimigo_09
+        );
+        break;
+    case rm_level_ainveja: 
+        enemy_to_spawn = choose (
+            obj_enemy_1,
+            obj_enemy_1_children,
+            obj_enemy_2,
+            obj_enemy_2_children,
+            obj_enemy_3
+    );
+    break;
+}
 
 var margem = 100;
 
